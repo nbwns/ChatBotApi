@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -16,12 +17,18 @@ namespace ChatBotApi.Models
 
         }
 
-        public async Task<string> GetAnswerAsync(Question question)
+        public async Task<QnaResponse> GetAnswerAsync(Question question)
         {
 
             string uri = "https://qnabxlformation.azurewebsites.net/qnamaker/knowledgebases/5b10b5b9-48cf-4cbe-a00e-27c6bb332588/generateAnswer";
             HttpResponseMessage answer = await client.PostAsJsonAsync(uri, question);
-            return await answer.Content.ReadAsStringAsync();
+
+            var response= await answer.Content.ReadAsAsync<QnaResponse>();
+
+            return response;
+            //var json = await answer.Content.ReadAsStringAsync();
+            //var superjson =  await JsonConvert.DeserializeObject<Task<string>>(json);
+            //return superjson;
         }
 
         private void Initialize()
