@@ -11,42 +11,47 @@ using System.Web.Http.Cors;
 namespace ChatBotApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class QnAController : ApiController
+    public class KBController : ApiController
     {
-        private IQservices _qServices;
 
-        public QnAController()
+        private KbServices _kbService;
+
+        public KBController()
         {
-            _qServices = new QnAServices();
+            _kbService = new KbServices();
         }
-        // GET: api/QnA
+
+        // GET: api/KB
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/QnA/5
+        // GET: api/KB/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/QnA
-        [Route("api/QnA/answer")]
-        public async Task<QnaResponse> Post(Question question)
+
+
+        // POST: api/KB
+        [Route("api/KBController/update")]
+        public async Task Post(QnAPair qnAPair)
         {
-            var result = await _qServices.GetAnswerAsync(question);
-            return result;
+            await _kbService.UpdateAsync(qnAPair.question, qnAPair.answer);
         }
 
-        // PUT: api/QnA/5
+        // PUT: api/KB/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE: api/QnA/5
+        // DELETE: api/KB/5
         public void Delete(int id)
         {
         }
+
+
     }
 }
