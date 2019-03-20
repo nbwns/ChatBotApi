@@ -20,7 +20,7 @@ namespace ChatBotApi.Models
         public async Task<QnaResponse> GetAnswerAsync(Question question)
         {
 
-            string uri = "https://qnabxlformation.azurewebsites.net/qnamaker/knowledgebases/5b10b5b9-48cf-4cbe-a00e-27c6bb332588/generateAnswer";
+            string uri = "https://qnabxlformation.azurewebsites.net/qnamaker/knowledgebases/65c4283a-e248-4ec9-909f-8dc25c216f7b/generateAnswer";
             HttpResponseMessage answer = await client.PostAsJsonAsync(uri, question);
 
             var response= await answer.Content.ReadAsAsync<QnaResponse>();
@@ -34,7 +34,7 @@ namespace ChatBotApi.Models
         private void Initialize()
         {
             // Update port # in the following line.
-            client.BaseAddress = new Uri("https://qnabxlformation.azurewebsites.net/qnamaker/knowledgebases/5b10b5b9-48cf-4cbe-a00e-27c6bb332588/generateAnswer");
+            client.BaseAddress = new Uri("https://qnabxlformation.azurewebsites.net/qnamaker/knowledgebases/65c4283a-e248-4ec9-909f-8dc25c216f7b/generateAnswer");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("EndpointKey", "1e3eced3-ef47-4091-9139-2651a5bafa60");
             client.DefaultRequestHeaders.Accept.Add(
