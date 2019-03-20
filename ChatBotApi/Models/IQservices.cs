@@ -4,6 +4,6 @@ namespace ChatBotApi.Models
 {
     public interface IQservices
     {
-        Task<string> GetAnswerAsync(Question question);
+        Task<QnaResponse> GetAnswerAsync(Question question);
     }
 }

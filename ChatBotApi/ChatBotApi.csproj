@@ -160,6 +160,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IQservices.cs" />
+    <Compile Include="Models\QnaResponse.cs" />
     <Compile Include="Models\QnAServices.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

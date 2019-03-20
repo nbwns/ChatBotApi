@@ -31,7 +31,7 @@ namespace ChatBotApi.Controllers
 
         // POST: api/QnA
         [Route("api/QnA/answer")]
-        public async Task<string> Post(Question question)
+        public async Task<QnaResponse> Post(Question question)
         {
             var result = await _qServices.GetAnswerAsync(question);
             return result;
