@@ -9,15 +9,15 @@ Il est personnalisable au niveau du UI en fonction de vos besoins.
 Avec ce bot, facilitez vos interactions avec vos clients, augmentez le taux de satisfaction et conversion client pour le commerce de demain. Diminuez vos coûts de support et augmentez vos ventes de produits et services.
 
 ### L'équipe
-L'équipe es composée de:
-Founder: Pierre Zhang
-CTO: Gia Ke Thien Nguyen
-Front Dev: Nelson Henri, Nadia Mharzi
-Back Dev: Nadir Bakkali Karfa, Jonathan De Decker 
+L'équipe es composée de:\
+Founder: Pierre Zhang\
+CTO: Gia Ke Thien Nguyen\
+Front Dev: Nelson Henri, Nadia Mharzi\
+Back Dev: Nadir Bakkali Karfa, Jonathan De Decker
 
 ### Technologies utilisées
 Ce bot utilise la technologie QnA maker de Microsoft et est hébergé sur Microsoft Azure. L'interface est développé avec Vue CLI.
 
 ### Liens :
-GitHub Front-end : https://github.com/k-n-n/hakobio-support-chatbot-hackathon
+GitHub Front-end : https://github.com/k-n-n/hakobio-support-chatbot-hackathon \
 Demo du bot : https://competent-bassi-dcc935.netlify.com/
