@@ -13,7 +13,7 @@ using System.Web.Script.Serialization;
 
 namespace ChatBotApi.Models
 {
-    public class KbServices : IKbServices
+    public class KbServices
     {
 
         HttpClient client = new HttpClient();

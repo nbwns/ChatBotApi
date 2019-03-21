@@ -167,7 +167,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\IKbServices.cs" />
     <Compile Include="Models\IQservices.cs" />
     <Compile Include="Models\KBAddJson.cs" />
     <Compile Include="Models\KbServices.cs" />
