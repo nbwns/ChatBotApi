@@ -1,9 +1,5 @@
 ﻿using ChatBotApi.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -37,9 +33,10 @@ namespace ChatBotApi.Controllers
 
         // POST: api/KB
         [Route("api/KBController/update")]
-        public async Task Post(QnAPair qnAPair)
+        public async Task<IHttpActionResult> Post(QnAPair qnAPair)
         {
             await _kbService.UpdateAsync(qnAPair.question, qnAPair.answer);
+            return Ok();
         }
 
         // PUT: api/KB/5
